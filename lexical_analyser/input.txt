@@ -1,0 +1,5 @@
+#include < stdio >
+{
+    int ab = 1;
+    printf ( ab );
+}
