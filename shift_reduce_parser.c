@@ -86,7 +86,7 @@ void check()
 
     for(z=0;z<len;z++)
     {
-        if(stk[z]=='(' && stk[z+1]=='+' && stk[z+2]==')')
+        if(stk[z]=='(' && stk[z+1]=='E' && stk[z+2]==')')
         {
             stk[z]='E';
             stk[z+1]='\0';
