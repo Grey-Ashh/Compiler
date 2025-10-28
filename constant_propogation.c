@@ -69,17 +69,26 @@ void constant() {
 
 void output()
 {
-    int allFolded = 1;
-    for (int i = 0; i < n; i++) {
-        if (!arr[i].flag) {
-            allFolded = 0;
-            printf("%s %s %s %s\n", arr[i].op, arr[i].arg1, arr[i].arg2, arr[i].res);
+    printf("\nexp: \n");
+
+    int flag=0;
+    int i=0;
+    for(i=0;i<n;i++)
+    {
+        if(arr[i].flag==0)
+        {
+            printf("%s %s %s %s \n",arr[i].op,arr[i].arg1,arr[i].arg2,arr[i].res);
+            flag=1;
         }
     }
-    if (allFolded)
-        printf("All expressions were constant folded.\n");
+    if (flag==0)
+    {
+        printf("%s %d %s %s \n","=",res_1,"-",arr[i-1].res);
 
+    }
+    
 }
+
 
 int main()
 {
@@ -88,3 +97,4 @@ int main()
     output();
     return 0;
 }
+
