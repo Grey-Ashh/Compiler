@@ -8,7 +8,7 @@ struct expr{
     int flag;
 }arr[10];
 int n;
-
+int res_1;
 void change(int p,char *res)
 {
     for(int i=p+1;i<n; i++)
@@ -64,6 +64,7 @@ void constant() {
             change(i, temp_res);
         }
     }
+    res_1=res;
 }
 
 
